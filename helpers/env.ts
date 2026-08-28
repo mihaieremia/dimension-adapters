@@ -27,6 +27,8 @@ const DEFAULTS: any = {
   MANTLE_ARCHIVAL_RPC: 'https://explorer.mantle.xyz/api/eth-rpc',
   GATELAYER_RPC: 'https://www.gatescan.org/gatelayer/api/eth-rpc',
   ROBINHOOD_RPC: 'https://rpc.mainnet.chain.robinhood.com',
+  RISE_ARCHIVAL_RPC: 'https://explorer.risechain.com/api/eth-rpc', // public rpc.risechain.com caps eth_getLogs at 5000 blocks
+  RONIN_RPC: 'https://ronin.gateway.tenderly.co,https://gateway.tenderly.co/public/ronin',
   SHIDO_RPC: 'https://shidoscan.net/api/eth-rpc',
   SAGA_RPC: "https://sagaevm.jsonrpc.sagarpc.io",
   SAGA_WHITELISTED_RPC: 'https://sagaevm-archive.jsonrpc.sagarpc.io',
@@ -40,6 +42,7 @@ const DEFAULTS: any = {
   HYDRADX_BLOCK_LOW: '7036666',
   DERIVE_API_KEY: '0485a970adfdf963bca' + '126b3ddbc52eb6570aa3' + '5169fa6a2157dd76cbfacd1bb',
   DEBUG_BREAKDOWN_FEES: true,
+  SUI_GRAPH_RPC: 'https://graphql.mainnet.sui.io/graphql',
 }
 
 export const ENV_KEYS = new Set([
@@ -72,6 +75,7 @@ export const ENV_KEYS = new Set([
   'CG_KEY',
   'METAPLEX_API_KEY',
   'DEFIAPP_API_KEY',
+  'GATESWAP_DEFILLAMA_API_KEY',
   'SMARDEX_SUBGRAPH_API_KEY',
   'VIRTUS_BACKEND_BASE',
   'DUNE_BULK_MODE',
@@ -93,7 +97,9 @@ export const ENV_KEYS = new Set([
   'PEARL_BLOCKBOOK_API',
   'OKLINK_API_KEY',
   'TRONSCAN_API_KEY',
-  'ROBINHOOD_RPC'
+  'ROBINHOOD_RPC',
+  'INTERNAL_API_KEY',
+  'MARKETS_API'
 ])
 
 // This is done to support both ZEROx_API_KEY and ZEROX_API_KEY
